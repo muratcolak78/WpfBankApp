@@ -6,7 +6,19 @@
         xmlns:local="clr-namespace:WpfBankApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FF130101">
+        <Label x:Name="lblUsername" Content="Username" HorizontalAlignment="Left" Margin="23,90,0,0" VerticalAlignment="Top" Width="156" Foreground="#FFFBF8F8" FontWeight="Bold" FontSize="16"/>
+        <TextBox x:Name="txtbxBenutzername" HorizontalAlignment="Left" Margin="28,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="18"/>
+        <Label x:Name="lblPasswort" Content="Passwort" HorizontalAlignment="Left" Margin="28,174,0,0" VerticalAlignment="Top" Width="156" Foreground="#FFFBF8F8" FontWeight="Bold" FontSize="16"/>
+        <PasswordBox x:Name="txtbxPassword" HorizontalAlignment="Left" Margin="28,212,0,0" VerticalAlignment="Top" Width="206" FontSize="18"/>
+        <Button x:Name="btnAnmelden" Content="Log In" HorizontalAlignment="Left" Margin="28,275,0,0" VerticalAlignment="Top" Width="206" FontSize="16" FontWeight="Bold" Foreground="#FF22A517" Background="{x:Null}" Height="30" Click="btnAnmelden_Click" BorderBrush="{x:Null}"/>
+        <Button x:Name="btnRegistrieren" Content="Sign In" HorizontalAlignment="Left" Margin="28,357,0,0" VerticalAlignment="Top" Width="206" Background="{x:Null}" FontSize="16" Foreground="#FF8F96CA" FontWeight="Bold" BorderBrush="{x:Null}" Click="btnRegistrieren_Click"/>
+        <Button x:Name="btnClose" Content="" HorizontalAlignment="Left" Margin="735,32,0,0" VerticalAlignment="Top" Height="28" Width="29" Click="btnClose_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/close.PNG"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Welcome to the bank application. " HorizontalAlignment="Left" Margin="192,32,0,0" VerticalAlignment="Top" Foreground="#FFF9F5F5" FontSize="22" FontWeight="Bold"/>
 
     </Grid>
 </Window>

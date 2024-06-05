@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfBankApp.TransferPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBankApp"
+        mc:Ignorable="d"
+        Title="TransferPage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="632*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Background="#FF00050C">
+            <Button x:Name="btnDeposit" Content="deposit" Height="57" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Width="162"  FontSize="16" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF7F6F6" Click="btnDeposit_Click"/>
+            <Button x:Name="btnWithdraw" Content="withdraw" Width="162"  Height="56" HorizontalContentAlignment="Left" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}"  Foreground="#FFF7F6F6" Click="btnWithdraw_Click"/>
+            <Button x:Name="btnTransferToMe" Content="transfer &#xD;&#xA;to my account" Width="162"  Height="56" HorizontalContentAlignment="Left" FontSize="16" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF7F6F6" Click="btnTransferToMe_Click"/>
+            <Button x:Name="btnTransferToAnother" Content="transfer &#xA;to enother account" Width="162"  Height="56" HorizontalContentAlignment="Left" FontSize="16" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF7F6F6" Click="btnTransferToAnother_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2">
+            <ContentControl Name="contentControl" />
+        </StackPanel>
+    </Grid>
+</Window>

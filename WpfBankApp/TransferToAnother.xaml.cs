@@ -22,7 +22,7 @@ namespace WpfBankApp
         public TransferToAnother()
         {
             InitializeComponent();
-            DataGridAllAccount.ItemsSource = AlleListen.User.Accounts;
+            DG1.ItemsSource = AlleListen.User.Accounts;
         }
 
         private void btnDeposit_Click(object sender, RoutedEventArgs e)
@@ -48,7 +48,7 @@ namespace WpfBankApp
 
                             JSONHelper.saveAsJson(AlleListen.Users, "users.json");
 
-                            AlleListen.aktullenGridData(DataGridAllAccount);
+                            AlleListen.aktullenGridData(DG1);
 
                             MessageBox.Show($"money was transferred succesfully from {accountWithdraw.AccountName} to {accountDeposit.AccountName}");
                             txtbxIBANFrom.Text = string.Empty;
@@ -69,6 +69,25 @@ namespace WpfBankApp
             }
             else MessageBox.Show("there is no such account");
 
+        }
+
+        private void DG1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            if (DG1.SelectedItem is BankAccount account)
+            {
+
+                txtbxIBANFrom.Text = account.IBAN;
+            }
+
+
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            txtbxIBANFrom.Text = string.Empty;
+            txtbxIBANTo.Text = string.Empty;
+            txtbxBalance.Text = string.Empty;
         }
     }
 }

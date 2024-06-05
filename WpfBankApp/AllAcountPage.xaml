@@ -8,7 +8,12 @@
         Title="AllAcountPage" Height="450" Width="632">
     <Grid>
         <Label Name="lblallAccount" Content="ACCOUNTS" Margin="0,0,0,395" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center"/>
-        <DataGrid x:Name="DataGridAllAccount" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="0,44,0,245" FontSize="14" HorizontalAlignment="Center" Width="612" IsSynchronizedWithCurrentItem="True" IsEnabled="True" IsReadOnly="False" ItemsSource="{Binding CanUserAddRows.FalseString, ElementName=DataGridBankAccount}" />
-
+        <DataGrid Name="DG1" AutoGenerateColumns="False" ItemsSource="{Binding}" Margin="0,39,0,239" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="IBAN" Binding="{Binding IBAN}" />
+                <DataGridTextColumn Header="Account Name" Binding="{Binding AccountName}" />
+                <DataGridTextColumn Header="Balance" Binding="{Binding Balance}" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

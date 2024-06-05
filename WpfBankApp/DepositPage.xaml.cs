@@ -22,7 +22,7 @@ namespace WpfBankApp
         public DepositPage()
         {
             InitializeComponent();
-            DataGridAllAccount.ItemsSource = AlleListen.User.Accounts;
+            DG1.ItemsSource = AlleListen.User.Accounts;
 
         }
 
@@ -40,7 +40,7 @@ namespace WpfBankApp
                     JSONHelper.saveAsJson(AlleListen.Users, "users.json");
                     //AlleListen.aktullenListen();
 
-                    AlleListen.aktullenGridData(DataGridAllAccount);
+                    AlleListen.aktullenGridData(DG1);
 
                     MessageBox.Show("money deposited into account");
                     txtbxIBAN.Text = string.Empty;
@@ -49,6 +49,13 @@ namespace WpfBankApp
                 else MessageBox.Show("please enter a valid numbers");
             }
             else MessageBox.Show("there is no such account");
+        }
+        private void DG1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (DG1.SelectedItem is BankAccount account)
+            {
+                txtbxIBAN.Text = account.IBAN;
+            }
         }
     }
 }

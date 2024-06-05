@@ -22,7 +22,7 @@ namespace WpfBankApp
         public AllAcountPage()
         {
             InitializeComponent();
-            DataGridAllAccount.ItemsSource = AlleListen.User.Accounts;
+            DG1.ItemsSource = AlleListen.User.Accounts;
         }
     }
 }

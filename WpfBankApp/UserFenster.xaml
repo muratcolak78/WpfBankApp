@@ -6,27 +6,24 @@
         xmlns:local="clr-namespace:WpfBankApp"
         mc:Ignorable="d"
         Title="UserFenster" Height="450" Width="800">
-    <Grid>
+    <Grid >
+        
+        <DockPanel >
 
-        <DockPanel Grid.ColumnSpan="2" Grid.RowSpan="2">
-
-            <Menu DockPanel.Dock="Top">
+            <Menu DockPanel.Dock="Top" Height="35">
                 <MenuItem Header="My Accounts" Click ="MenuItem_Click" />
-                <MenuItem Header="Transfer" Click ="MenuItem_Click" />             
+                <MenuItem Header="Transfer" Click ="MenuItem_Click" />
                 <MenuItem Header="Exit" Click="MenuItem_Click_1"  />
                 <Separator />
                 <Label x:Name="lblUsername" Content="" Width="431" HorizontalContentAlignment="Right"/>
             </Menu>
 
             <ContentControl Name="contentControl" />
-            <WrapPanel Background="Black" Width="422" Margin="10,50,0,100" Height="147">
-                <Label Content="With this program, you can see all of your bank accounts." Foreground="#FFF7F6F6" FontSize="14" HorizontalContentAlignment="Center" Width="423" />
-                <Label Content="You can also deposit money to your account on the transfer page," Height="37" Foreground="#FFF7F6F6" FontSize="14" HorizontalContentAlignment="Center" Width="423"/>
-                <Label Content="withdraw money, make transfers between your own accounts," Height="32" Foreground="#FFF7F6F6" FontSize="14" HorizontalContentAlignment="Center" Width="423"/>
-                <Label Content="and also transfer money to other people's accounts." Height="37" Foreground="#FFF7F6F6" Width="423" FontSize="14" HorizontalContentAlignment="Center"/>
-            </WrapPanel>
-
         </DockPanel>
+        <!--<Label Content="With this program, you can see all of your bank accounts." Foreground="#FFF7F6F6" FontSize="14" HorizontalContentAlignment="Center" Width="423" />
+        <Label Content="You can also deposit money to your account on the transfer page," Height="37" Foreground="#FFF7F6F6" FontSize="14" HorizontalContentAlignment="Center" Width="423"/>
+        <Label Content="withdraw money, make transfers between your own accounts," Height="32" Foreground="#FFF7F6F6" FontSize="14" HorizontalContentAlignment="Center" Width="423"/>
+        <Label Content="and also transfer money to other people's accounts." Height="37" Foreground="#FFF7F6F6" Width="423" FontSize="14" HorizontalContentAlignment="Center"/>-->
 
     </Grid>
 </Window>

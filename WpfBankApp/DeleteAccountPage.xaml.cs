@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace WpfBankApp
 {
@@ -24,7 +25,7 @@ namespace WpfBankApp
         public DeleteAccountPage()
         {
             InitializeComponent();
-            DataGridAllAccount.ItemsSource = AlleListen.User.Accounts;
+            DG1.ItemsSource = AlleListen.User.Accounts;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -47,7 +48,7 @@ namespace WpfBankApp
                         JSONHelper.saveAsJson(AlleListen.Ibans, "ibans.json");
                         txtbxDeleteIban.Text = string.Empty;
 
-                        AlleListen.aktullenGridData(DataGridAllAccount);
+                        AlleListen.aktullenGridData(DG1);
 
                         //DataGridAllAccount.ItemsSource = null;
                         //DataGridAllAccount.ItemsSource = AlleListen.User.Accounts;
@@ -63,6 +64,13 @@ namespace WpfBankApp
 
             }
 
+        }
+        private void DG1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (DG1.SelectedItem is BankAccount account)
+            {
+                txtbxDeleteIban.Text = account.IBAN;
+            }
         }
     }
 }

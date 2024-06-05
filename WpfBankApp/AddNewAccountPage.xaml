@@ -9,8 +9,13 @@
     <Grid>
         <Label Name="lblallAccount" Content="ADD NEW ACCOUNT" Margin="0,0,0,395" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center"/>
 
-        <DataGrid x:Name="DataGridAllAccount" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="0,39,0,253" FontSize="14" HorizontalAlignment="Center" Width="612" IsSynchronizedWithCurrentItem="True" IsEnabled="True" IsReadOnly="False" ItemsSource="{Binding CanUserAddRows.FalseString, ElementName=DataGridBankAccount}" />
-
+         <DataGrid Name="DG1" AutoGenerateColumns="False" ItemsSource="{Binding}" Margin="0,39,0,239" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="IBAN" Binding="{Binding IBAN}" />
+                <DataGridTextColumn Header="Account Name" Binding="{Binding AccountName}" />
+                <DataGridTextColumn Header="Balance" Binding="{Binding Balance}" />
+             </DataGrid.Columns>
+        </DataGrid>
         <Label Content="Account Name" HorizontalAlignment="Left" Margin="112,200,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16" FontWeight="Bold"/>
         <TextBox x:Name="txtbxAccountName" HorizontalAlignment="Left" Margin="248,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" FontSize="16" FontWeight="Bold"/>
         <Label Content="Balance" HorizontalAlignment="Left" Margin="146,240,0,0" VerticalAlignment="Top" Width="88" HorizontalContentAlignment="Right" FontSize="16" FontWeight="Bold"/>

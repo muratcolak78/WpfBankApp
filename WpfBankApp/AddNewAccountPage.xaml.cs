@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace WpfBankApp
 {
@@ -22,7 +23,8 @@ namespace WpfBankApp
         public AddNewAccountPage()
         {
             InitializeComponent();
-            DataGridAllAccount.ItemsSource = AlleListen.User.Accounts;
+            
+            DG1.ItemsSource = AlleListen.User.Accounts;
         }
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
@@ -59,5 +61,6 @@ namespace WpfBankApp
             else MessageBox.Show("account name cannot be empty !");
 
         }
+       
     }
 }

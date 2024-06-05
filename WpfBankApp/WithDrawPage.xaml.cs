@@ -22,7 +22,7 @@ namespace WpfBankApp
         public WithDrawPage()
         {
             InitializeComponent();
-            DataGridAllAccount.ItemsSource = AlleListen.User.Accounts;
+            DG1.ItemsSource = AlleListen.User.Accounts;
         }
 
         private void btnDeposit_Click(object sender, RoutedEventArgs e)
@@ -41,7 +41,7 @@ namespace WpfBankApp
 
                         JSONHelper.saveAsJson(AlleListen.Users, "users.json");
 
-                        AlleListen.aktullenGridData(DataGridAllAccount);
+                        AlleListen.aktullenGridData(DG1);
 
                         MessageBox.Show("money withdrwad from account");
                         txtbxIBAN.Text = string.Empty;
@@ -53,6 +53,13 @@ namespace WpfBankApp
                 else MessageBox.Show("please enter a valid numbers");
             }
             else MessageBox.Show("there is no such account");
+        }
+        private void DG1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (DG1.SelectedItem is BankAccount account)
+            {
+                 txtbxIBAN.Text = account.IBAN;
+            }
         }
     }
 }

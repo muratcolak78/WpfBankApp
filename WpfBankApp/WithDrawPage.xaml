@@ -7,7 +7,14 @@
         mc:Ignorable="d"
         Title="WithDrawPage" Height="450" Width="632">
     <Grid>
-        <DataGrid x:Name="DataGridAllAccount" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="0,44,0,245" FontSize="14" HorizontalAlignment="Center" Width="612" IsSynchronizedWithCurrentItem="True" IsEnabled="True" IsReadOnly="False" ItemsSource="{Binding CanUserAddRows.FalseString, ElementName=DataGridBankAccount}" />
+        <DataGrid Name="DG1" AutoGenerateColumns="False" ItemsSource="{Binding}" Margin="0,39,0,239" SelectionChanged="DG1_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="IBAN" Binding="{Binding IBAN}" />
+                <DataGridTextColumn Header="Account Name" Binding="{Binding AccountName}" />
+                <DataGridTextColumn Header="Balance" Binding="{Binding Balance}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
         <Label Content="WITHDRAW" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="612" FontSize="18" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label Content="IBAN" HorizontalAlignment="Left" Margin="190,256,0,0" VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Right" FontSize="14" FontWeight="Bold"/>
         <Label Content="Balance" HorizontalAlignment="Left" Margin="146,290,0,0" VerticalAlignment="Top" Width="94" HorizontalContentAlignment="Right" FontSize="14" FontWeight="Bold"/>

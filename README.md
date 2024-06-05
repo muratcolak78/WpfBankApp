@@ -1,4 +1,4 @@
-
+Mit dieser Anwendung werden Banktransaktionen programmiert. Der Benutzer muss sich zunächst registrieren und kann sich dann anmelden. Bei der Registrierung muss der Nutzer die notwendigen Regeln für Benutzernamen- und Passwortverfahren einhalten. Mit diesem Programm kann der Benutzer Bankkonten erstellen und löschen. Benutzer können Geld auf ihre eigenen Konten einzahlen und abheben. Darüber hinaus kann er/sie Überweisungen sowohl zwischen seinen/ihren Konten als auch auf die Konten anderer vornehmen. Die IBAN-Nummer für jedes Konto wird automatisch generiert und in der JSON-Datei gespeichert. Darüber hinaus werden alle Daten in JSON-Dateien gespeichert und bei jedem Programmstart geladen und verwendet.
 ![Screenshot_2](https://github.com/muratcolak78/WpfBankApp/assets/119779883/7a51aea8-6453-404a-b1a9-8fb957c74897)
 
 ![Screenshot_3](https://github.com/muratcolak78/WpfBankApp/assets/119779883/f695ac32-8178-4b88-beee-dbd2155fa89b)

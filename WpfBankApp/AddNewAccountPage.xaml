@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="AddNewAccountPage" Height="450" Width="632">
     <Grid>
-        <DataGrid x:Name="DataGridAllAccount" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="0,0,0,253" FontSize="14" HorizontalAlignment="Center" Width="612" IsSynchronizedWithCurrentItem="True" IsEnabled="True" IsReadOnly="False" ItemsSource="{Binding CanUserAddRows.FalseString, ElementName=DataGridBankAccount}" />
+        <Label Name="lblallAccount" Content="ADD NEW ACCOUNT" Margin="0,0,0,395" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center"/>
+
+        <DataGrid x:Name="DataGridAllAccount" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="0,39,0,253" FontSize="14" HorizontalAlignment="Center" Width="612" IsSynchronizedWithCurrentItem="True" IsEnabled="True" IsReadOnly="False" ItemsSource="{Binding CanUserAddRows.FalseString, ElementName=DataGridBankAccount}" />
 
         <Label Content="Account Name" HorizontalAlignment="Left" Margin="112,200,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="16" FontWeight="Bold"/>
         <TextBox x:Name="txtbxAccountName" HorizontalAlignment="Left" Margin="248,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" FontSize="16" FontWeight="Bold"/>

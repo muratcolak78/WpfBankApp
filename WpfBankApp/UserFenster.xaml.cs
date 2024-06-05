@@ -42,11 +42,7 @@ namespace WpfBankApp
 
                     contentControl.Content = new TransferPage().Content;
                     break;
-                case "Campaigns":
-                    contentControl.Content = new CampaignsPage().Content;
-
-                    break;
-
+                
                 default:
                     break;
             }

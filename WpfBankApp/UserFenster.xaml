@@ -12,8 +12,7 @@
 
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="My Accounts" Click ="MenuItem_Click" />
-                <MenuItem Header="Transfer" Click ="MenuItem_Click" />
-                <MenuItem Header="Campaigns" Click ="MenuItem_Click" />
+                <MenuItem Header="Transfer" Click ="MenuItem_Click" />             
                 <MenuItem Header="Exit" Click="MenuItem_Click_1"  />
                 <Separator />
                 <Label x:Name="lblUsername" Content="" Width="431" HorizontalContentAlignment="Right"/>

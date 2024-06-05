@@ -29,7 +29,7 @@ namespace WpfBankApp
         {
             if (txtbxAccountName.Text.Length > 0)
             {
-                if (Decimal.TryParse(txtbxBalance.Text, out decimal balance))
+                if (double.TryParse(txtbxBalance.Text, out double balance))
                 {
                     if (balance >= 0)
                     {

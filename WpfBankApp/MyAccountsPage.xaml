@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfBankApp.MyAccountsPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBankApp"
+        mc:Ignorable="d"
+        Title="MyAccountsPage" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="632*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Background="#FF00040A">
+            <Button x:Name="btnAllaccount" Content="all accounts" Height="57" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Width="162" Click="Button_Click_1" FontSize="16" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFFFFEFE"/>
+            <Button x:Name="btnAddNewAccount" Content="add new account" Width="162"  Height="56" HorizontalContentAlignment="Left" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnAddNewAccount_Click" Foreground="#FFF5F3F3"/>
+            <Button x:Name="btnAddNewAccount_Kopieren" Content="delete account" Width="162"  Height="56" HorizontalContentAlignment="Left" FontSize="16" FontWeight="Bold" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnAddNewAccount_Kopieren_Click" Foreground="#FFF5F3F3"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2">
+            <ContentControl Name="contentControl" />
+        </StackPanel>
+
+    </Grid>
+</Window>

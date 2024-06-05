@@ -15,7 +15,7 @@
         <Button x:Name="btnRegistrieren" Content="Sign In" HorizontalAlignment="Left" Margin="28,357,0,0" VerticalAlignment="Top" Width="206" Background="{x:Null}" FontSize="16" Foreground="#FF8F96CA" FontWeight="Bold" BorderBrush="{x:Null}" Click="btnRegistrieren_Click"/>
         <Button x:Name="btnClose" Content="" HorizontalAlignment="Left" Margin="735,32,0,0" VerticalAlignment="Top" Height="28" Width="29" Click="btnClose_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/close.PNG"/>
+                <ImageBrush ImageSource="/close.PNG" />
             </Button.Background>
         </Button>
         <Label Content="Welcome to the bank application. " HorizontalAlignment="Left" Margin="192,32,0,0" VerticalAlignment="Top" Foreground="#FFF9F5F5" FontSize="22" FontWeight="Bold"/>

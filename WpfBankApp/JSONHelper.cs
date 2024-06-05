@@ -1,12 +1,6 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Xml;
 
@@ -22,7 +16,7 @@ namespace WpfBankApp
                 var settings = new JsonSerializerSettings
                 {
                     TypeNameHandling = TypeNameHandling.Auto,
-                    Formatting = Formatting.Indented
+                    //Formatting = Formatting.Indented
                 };
 
                 string jsonString = JsonConvert.SerializeObject(list, settings);

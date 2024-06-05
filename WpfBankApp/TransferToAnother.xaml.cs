@@ -22,6 +22,53 @@ namespace WpfBankApp
         public TransferToAnother()
         {
             InitializeComponent();
+            DataGridAllAccount.ItemsSource = AlleListen.User.Accounts;
+        }
+
+        private void btnDeposit_Click(object sender, RoutedEventArgs e)
+        {
+            var accountWithdraw = AlleListen.User.Accounts.Find(n => n.IBAN == txtbxIBANFrom.Text);
+
+            var accountDeposit = AlleListen.Users
+            .SelectMany(user => user.Accounts)
+            .FirstOrDefault(account => account.IBAN == txtbxIBANTo.Text);
+
+
+            if (accountWithdraw != null)
+            {
+
+                if (accountWithdraw != null)
+                {
+                    if (double.TryParse(txtbxBalance.Text, out double TransferGeld))
+                    {
+                        if (TransferGeld <= accountWithdraw.Balance)
+                        {
+                            accountWithdraw.Withdraw(TransferGeld);
+                            accountDeposit.Deposit(TransferGeld);
+
+                            JSONHelper.saveAsJson(AlleListen.Users, "users.json");
+
+                            AlleListen.aktullenGridData(DataGridAllAccount);
+
+                            MessageBox.Show($"money was transferred succesfully from {accountWithdraw.AccountName} to {accountDeposit.AccountName}");
+                            txtbxIBANFrom.Text = string.Empty;
+                            txtbxIBANTo.Text = string.Empty;
+                            txtbxBalance.Text = string.Empty;
+
+                        }
+                        else MessageBox.Show("insufficient funds");
+
+                    }
+                    else MessageBox.Show("please enter a valid numbers");
+
+
+                }
+                else MessageBox.Show("there is no such account");
+
+
+            }
+            else MessageBox.Show("there is no such account");
+
         }
     }
 }
